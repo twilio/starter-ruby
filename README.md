@@ -1,4 +1,4 @@
-starter-ruby
-============
+# TwilioQuest Starter App for Ruby Developers
 
-A simple Twilio-powered starter application, written in Ruby and the Sinatra web framework
+Welcome to TwilioQuest! This project is intended to get you up and running
+quickly with a simple web app that makes use of the Twilio platform.
