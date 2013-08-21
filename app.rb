@@ -12,20 +12,17 @@ configure do
 end
 use Rack::Flash
 
-# Configure this application with your Twilio account credentials
-# NOTE: It is best to store these values in environment variables in a
-# production application, not in source code.
-#
-# You can find these values for your account (requires login) by visiting:
-# https://www.twilio.com/user/account
+# Configure this application with your Twilio account credentials. We are
+# loading them from system environment variables, which is the most secure
+# way to store your Twilio credentials on a server. For information 
 #
 # Your account SID is like your Twilio API user name - it will look something
 # like "ACblahblahblahblahblahblahblahblah"
-TWILIO_ACCOUNT_SID = 'CHANGE_ME'
+TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
 
 # Your auth token is like your Twilio API password - it will be a long
 # string of random characters
-TWILIO_AUTH_TOKEN = 'CHANGE_ME'
+TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
 
 # Your Twilio number should be a valid phone number.  Twilio will parse any
 # US phone number in a variety of formats, but for the sake of consistency,
@@ -34,7 +31,7 @@ TWILIO_AUTH_TOKEN = 'CHANGE_ME'
 # To see a list of your account's phone numbers, visit this page:
 # https://www.twilio.com/user/account/phone-numbers/incoming
 #
-TWILIO_NUMBER = '+16518889999' ## << change to your Twilio number
+TWILIO_NUMBER = ENV['TWILIO_NUMBER']
 
 # Create an authenticated client to call Twilio's REST API
 client = Twilio::REST::Client.new TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN

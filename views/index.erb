@@ -89,8 +89,14 @@
         }
     }
 
-    $('#messaging').on('click', function() { changeTab('messaging'); });
-    $('#call').on('click', function() { changeTab('call'); });
+    $('#messaging').on('click', function(e) { 
+        changeTab('messaging');
+        e.stopPropagation(); 
+    });
+    $('#call').on('click', function(e) { 
+        changeTab('call'); 
+        e.stopPropagation();
+    });
 
     $('#flash a').on('click', function(e) {
         $('#flash').hide();
