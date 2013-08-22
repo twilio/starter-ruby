@@ -11,7 +11,8 @@ TWILIO_NUMBER = ENV['TWILIO_NUMBER']
 # Create an authenticated client to call Twilio's REST API
 client = Twilio::REST::Client.new TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN
 
-# Sinatra route for your app's home page at "http://yourserver.com/"
+# Sinatra route for your app's home page at "http://localhost:4567/" or your
+# public web server
 get '/' do
   erb :index
 end
