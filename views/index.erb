@@ -48,22 +48,12 @@
             <li id="messaging" class="current">Messaging</li>
             <li id="call">Voice Call</li>
         </ul>
-        <div id="messaging-demo">
-            <form id="message-form" action="/message" method="POST">
-                <p>Enter your mobile phone number:</p>
-                <input id="messageTo" type="text" 
-                    placeholder="ex: +16518675309"/>
-                <input type="submit" value="Send me a message"/>
-            </form>
-        </div>
-        <div id="call-demo">
-            <form id="call-form" action="/call" method="POST">
-                <p>Enter your mobile phone number:</p>
-                <input id="callTo" type="text" 
-                    placeholder="ex: +16518675309"/>
-                <input type="submit" value="Call my phone"/>
-            </form>
-        </div>
+        <form>
+            <p>Enter your mobile phone number:</p>
+            <input id="to" type="text" 
+                placeholder="ex: +16518675309"/>
+            <button>Send me a message</button>
+        </form>
     </div>
     <div id="footer">
         <span>Twilio</span><img src="/TwilioQuest32.png" alt="TwilioQuest"/>Quest
@@ -74,8 +64,8 @@
     </div>
 
     <!-- Some dirty JavaScript to help drive our UI -->
-    <script src="/js/tabs.js"></script>
+    <script src="/js/ui.js"></script>
     <!-- Some ajax magic to hit our back end and make calls/send messages -->
-    <script src="/js/forms.js"></script>
+    <script src="/js/form.js"></script>
 </body>
 </html>

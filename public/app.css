@@ -12,6 +12,10 @@ html, body, * {
     color:white;
 }
 
+form {
+    text-align:center;
+}
+
 h1 {
     font-size: 28px;
     margin:10px 0;
@@ -126,10 +130,6 @@ button:hover, input[type=button]:hover, input[type=submit]:hover {
 
 #welcome h1 span {
     color:red;
-}
-
-#messaging-demo, #call-demo {
-    text-align:center;
 }
 
 #footer {
