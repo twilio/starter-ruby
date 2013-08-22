@@ -1,36 +1,11 @@
-# Here we configure our web app's dependencies - in particular, we load the 
-# Twilio helper library for Ruby, and the Sinatra web application framework.
-# For more information on Sinatra, check out http://www.sinatrarb.com/
 require 'rubygems'
 require 'sinatra'
-require 'rack-flash'
 require 'twilio-ruby'
 
-# Configure session middleware to persist info messages across requests
-configure do
-  enable :sessions
-end
-use Rack::Flash
-
-# Configure this application with your Twilio account credentials. We are
-# loading them from system environment variables, which is the most secure
-# way to store your Twilio credentials on a server. For information 
-#
-# Your account SID is like your Twilio API user name - it will look something
-# like "ACblahblahblahblahblahblahblahblah"
+# Load configuration from system environment variables - see the README for more
+# on these variables.
 TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
-
-# Your auth token is like your Twilio API password - it will be a long
-# string of random characters
 TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
-
-# Your Twilio number should be a valid phone number.  Twilio will parse any
-# US phone number in a variety of formats, but for the sake of consistency,
-# we use the format below (plus sign, country code, area code, then number).
-#
-# To see a list of your account's phone numbers, visit this page:
-# https://www.twilio.com/user/account/phone-numbers/incoming
-#
 TWILIO_NUMBER = ENV['TWILIO_NUMBER']
 
 # Create an authenticated client to call Twilio's REST API
@@ -38,33 +13,20 @@ client = Twilio::REST::Client.new TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN
 
 # Sinatra route for your app's home page at "http://yourserver.com/"
 get '/' do
-  # If there was a message stored from a previous request to "/message" or
-  # "/call", it will be stored in a variable called "message" when rendering
-  # index.erb
-  erb :index, {
-    :locals => {
-      :message => flash[:message]
-    }
-  }
+  erb :index
 end
 
 # Handle a form POST to send a message
 post '/message' do
-
   # Use the REST API client to send a text message
   client.account.sms.messages.create(
-    :from => TWILIO_NUMBER, # This is the number you configured at the 
-                              # top of this file
-
-    :to => params[:to], # This is the phone number you're sending a text
-                        # message to, probably your mobile phone number.
-
-    :body => 'Good luck on your Twilio quest!' # This is the actual message
+    :from => TWILIO_NUMBER,
+    :to => params[:to],
+    :body => 'Good luck on your Twilio quest!'
   )
 
-  # Render the home page again, with an informative message
-  flash[:message] = 'Text message sent!'
-  redirect '/'
+  # Send back a message indicating the text is inbound
+  'Message on the way!'
 end
 
 # Handle a form POST to make a call
@@ -73,12 +35,11 @@ post '/call' do
   client.account.calls.create(
     :from => TWILIO_NUMBER,
     :to => params[:to],
-    :url => 'http://twimlets.com/message?Message%5B0%5D=Good%20luck%20on%20your%20Twilio%20Quest!'
+    :url => 'http://twimlets.com/message?Message%5B0%5D=http://demo.kevinwhinnery.com/audio/zelda.mp3'
   )
 
-  # Render the home page again, with an informative message
-  flash[:message] = 'Call inbound!'
-  redirect '/'
+  # Send back a text string with just a "hooray" message
+  'Call is inbound!'
 end
 
 # Render a TwiML document that will say a message back to the user
