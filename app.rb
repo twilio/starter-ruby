@@ -8,6 +8,9 @@ TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
 TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
 TWILIO_NUMBER = ENV['TWILIO_NUMBER']
 
+set :bind, '0.0.0.0'
+set :port, ENV['TWILIO_STARTER_RUBY_PORT'] || 4567
+
 # Create an authenticated client to call Twilio's REST API
 client = Twilio::REST::Client.new TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN
 

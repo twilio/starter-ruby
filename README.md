@@ -26,6 +26,13 @@ On Windows, the easiest way to set permanent environment variables (as of Window
     setx TWILIO_AUTH_TOKEN XXXXXXXXX
     setx TWILIO_NUMBER +16518675309
 
+## Developing on Nitrous.IO
+
+Start hacking on this app on [Nitrous.IO](https://www.nitrous.io/?utm_source=github.com&utm_campaign=twilio-starter-ruby&utm_medium=hackonnitrous) in seconds:
+
+[![Hack twilio/starter-ruby on
+Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=twilio%2Fstarter-ruby&file_to_open=README.nitrous.md)
+
 ## Running the application
 
 [Download the project source code directly](https://github.com/twilio/starter-ruby/archive/master.zip) or [clone the repository on GitHub](https://github.com/twilio/starter-ruby).  Navigate to the folder with the source code on your machine in a terminal window.
@@ -40,6 +47,7 @@ To install the gems manually (if you don't know what bundler is and/or don't hav
     gem install sinatra
 
 Now, you should be able to launch the application.  From your terminal, run `ruby app.rb`.  This should launch your sinatra application on port 4567 - [visit that URL on your local host](http://localhost:4567/).  Enter your mobile number in the fields provided, and test both SMS text messages and phone calls being sent to the mobile number you provide.
+
 
 ## Begin Questing!
 This is but your first step into a larger world.  [Return to TwilioQuest](http://quest.twilio.com) to continue your adventure.  Huzzah!
