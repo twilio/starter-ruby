@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export TWILIO_STARTER_RUBY_PORT=3000
+bundle exec ruby app.rb
