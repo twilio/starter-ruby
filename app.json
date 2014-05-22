@@ -1,9 +1,9 @@
 {
     "name": "Twilio Ruby Starter",
-    "description": "",
+    "description": "Pre-configured project to do some interesting Twilio stuff using Ruby and the light-weight Sinatra web framework",
     "keywords": ["Twilio", "Ruby", "voice", "sms"],
     "website": "https://github.com/twilio/starter-ruby",
-    "success_url": ":4567",
+    "success_url": "/",
     "env": {
         "TWILIO_ACCOUNT_SID": {
             "description": "You can find this on your Twilio Account info page",
