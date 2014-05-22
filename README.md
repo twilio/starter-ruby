@@ -4,17 +4,15 @@ As members of the Ruby guild, you will be working through the challenges of Twil
 
 ## Developing on Heroku
 
-Run this app on Heroku and continue working on it in a fully setup development environment. To get this application deployed on Heroku, just run the following curl command replacing the parameters with your own credentials. You can find your Twilio Account SID, Auth Token and Number from your Twilio account page and your Heroku API key in your Heroku acocunt page.
+Run this app on Heroku and continue working on it in a fully setup development environment. To get this application deployed on Heroku, create a Heroku account if you don't have one, and just run the following cURL command. Replace the parameters with your own credentials; You can find your Twilio Account SID, Auth Token and Number from your [Twilio Account page](https://www.twilio.com/user/account) and the Heroku API key in the [Heroku Dashboard](https://dashboard.heroku.com/account).
 
 ```term
 $ curl -X POST https://api.heroku.com/app-setups \
--H "Authorization:Basic <Heroku API key>"
--H "Content-Type:application/json" \
--H "Accept:application/vnd.heroku+json; version=3" \
--d '{"source_blob": { "url":"https://github.com/twilio/starter-ruby/tarball/master/"},
-"overrides": {"env": { "TWILIO_ACCOUNT_SID":"<your twilio account SID>", "TWILIO_AUTH_TOKEN":"<your twilio auth token>",
-           "TWILIO_NUMBER":"<your twilio number>" } } }'
+ -u '<Heroku Username>@heroku.com:<Heroku API key>' \
+-H 'Content-Type:application/json' -H 'Accept:application/vnd.heroku+json; version=3' \
+-d '{"source_blob": { "url":"https://github.com/twilio/starter-ruby/tarball/master/"},"overrides": {"env": { "TWILIO_ACCOUNT_SID":"<Twilio Account SID>", "TWILIO_AUTH_TOKEN":"<Twilio Auth Token>","TWILIO_NUMBER":"<Your Twilio Number>" } } }'  
 ```
+
 ## Setting Up
 
 We assume that before you begin, you will have [Ruby](http://www.ruby-lang.org/en/) and [RubyGems](http://rubygems.org/) installed on your system.  If you are on OS X, this should already be done for you.  On Windows, [you will need to do some work](https://forwardhq.com/support/installing-ruby-windows).
