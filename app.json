@@ -1,0 +1,25 @@
+{
+    "name": "Twilio Ruby Starter",
+    "description": "Pre-configured project to do some interesting Twilio stuff using Ruby and the light-weight Sinatra web framework",
+    "keywords": ["Twilio", "Ruby", "voice", "sms"],
+    "website": "https://github.com/twilio/starter-ruby",
+    "success_url": "/",
+    "env": {
+        "TWILIO_ACCOUNT_SID": {
+            "description": "You can find this on your Twilio Account info page",
+            "required": true
+        },
+        "TWILIO_AUTH_TOKEN": {
+            "description": "You can find this on your Twilio Account info page",
+            "required": true
+        },
+        "TWILIO_NUMBER": {
+            "description": "Outgoing Caller ID you have previously validated with Twilio",
+            "required": true
+        }
+    },
+    "addons": [
+    	"papertrail"
+    ]
+}
+
