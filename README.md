@@ -2,6 +2,19 @@
 
 As members of the Ruby guild, you will be working through the challenges of TwilioQuest using the Ruby programming language.  This project is pre-configured to do some interesting Twilio stuff using Ruby and the light-weight Sinatra web framework.
 
+## Developing on Heroku
+
+Run this app on Heroku and continue working on it in a fully setup development environment. To get this application deployed on Heroku, just run the following curl command replacing the parameters with your own credentials. You can find your Twilio Account SID, Auth Token and Number from your Twilio account page and your Heroku API key in your Heroku acocunt page.
+
+```term
+$ curl -X POST https://api.heroku.com/app-setups \
+-H "Authorization:Basic <Heroku API key>"
+-H "Content-Type:application/json" \
+-H "Accept:application/vnd.heroku+json; version=3" \
+-d '{"source_blob": { "url":"https://github.com/twilio/starter-ruby/tarball/master/"},
+"overrides": {"env": { "TWILIO_ACCOUNT_SID":"<your twilio account SID>", "TWILIO_AUTH_TOKEN":"<your twilio auth token>",
+           "TWILIO_NUMBER":"<your twilio number>" } } }'
+```
 ## Setting Up
 
 We assume that before you begin, you will have [Ruby](http://www.ruby-lang.org/en/) and [RubyGems](http://rubygems.org/) installed on your system.  If you are on OS X, this should already be done for you.  On Windows, [you will need to do some work](https://forwardhq.com/support/installing-ruby-windows).
@@ -33,7 +46,7 @@ Start hacking on this app on [Nitrous.IO](https://www.nitrous.io/?utm_source=git
 [![Hack twilio/starter-ruby on
 Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=twilio%2Fstarter-ruby&file_to_open=README.nitrous.md)
 
-## Running the application
+## Running the application locally
 
 [Download the project source code directly](https://github.com/twilio/starter-ruby/archive/master.zip) or [clone the repository on GitHub](https://github.com/twilio/starter-ruby).  Navigate to the folder with the source code on your machine in a terminal window.
 
