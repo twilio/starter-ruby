@@ -1,0 +1,26 @@
+{
+    "name": "Twilio Ruby Starter",
+    "description": "",
+    "keywords": ["Twilio", "Ruby", "voice", "sms"],
+    "website": "https://github.com/twilio/starter-ruby",
+    "success_url": ":4567",
+    "env": {
+        "TWILIO_ACCOUNT_SID": {
+            "description": "You can find this on your Twilio Account info page",
+            "required": true
+        },
+        "TWILIO_AUTH_TOKEN": {
+            "description": "You can find this on your Twilio Account info page",
+            "required": true
+        },
+        "TWILIO_NUMBER": {
+            "description": "Outgoing Caller ID you have previously validated with Twilio",
+            "required": true
+        }
+    },
+    "addons": [
+    	"papertrail"
+    ]
+    }
+}
+
