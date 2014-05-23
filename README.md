@@ -2,19 +2,6 @@
 
 As members of the Ruby guild, you will be working through the challenges of TwilioQuest using the Ruby programming language.  This project is pre-configured to do some interesting Twilio stuff using Ruby and the light-weight Sinatra web framework.
 
-## Developing on Heroku
-
-Run this app on Heroku and continue working on it in a fully setup development environment. To get this application deployed on Heroku, create a Heroku account if you don't have one, and just run the following cURL command. Replace the parameters with your own credentials; You can find your Twilio Account SID, Auth Token and Number from your [Twilio Account page](https://www.twilio.com/user/account) and the Heroku API key in the [Heroku Dashboard](https://dashboard.heroku.com/account).
-
-```term
-$ curl -X POST https://api.heroku.com/app-setups \
- -u '<Heroku Username>@heroku.com:<Heroku API key>' \
--H 'Content-Type:application/json' -H 'Accept:application/vnd.heroku+json; version=3' \
--d '{"source_blob": { "url":"https://github.com/twilio/starter-ruby/tarball/master/"},"overrides": {"env": { "TWILIO_ACCOUNT_SID":"<Twilio Account SID>", "TWILIO_AUTH_TOKEN":"<Twilio Auth Token>","TWILIO_NUMBER":"<Your Twilio Number>" } } }'  
-```
-
-In the response, you'll find the Heroku app name. Wait for a few minutes and you can access the app at ```http://<Heroku app name>.herokuapp.com/```
-
 ## Setting Up
 
 We assume that before you begin, you will have [Ruby](http://www.ruby-lang.org/en/) and [RubyGems](http://rubygems.org/) installed on your system.  If you are on OS X, this should already be done for you.  On Windows, [you will need to do some work](https://forwardhq.com/support/installing-ruby-windows).
