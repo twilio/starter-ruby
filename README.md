@@ -2,6 +2,8 @@
 
 As members of the Ruby guild, you will be working through the challenges of TwilioQuest using the Ruby programming language.  This project is pre-configured to do some interesting Twilio stuff using Ruby and the light-weight Sinatra web framework.
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ## Setting Up
 
 We assume that before you begin, you will have [Ruby](http://www.ruby-lang.org/en/) and [RubyGems](http://rubygems.org/) installed on your system.  If you are on OS X, this should already be done for you.  On Windows, [you will need to do some work](https://forwardhq.com/support/installing-ruby-windows).
