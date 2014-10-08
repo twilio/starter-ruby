@@ -1,4 +1,5 @@
 # Welcome to the Ruby Guild!
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/twilio/starter-ruby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 As members of the Ruby guild, you will be working through the challenges of TwilioQuest using the Ruby programming language.  This project is pre-configured to do some interesting Twilio stuff using Ruby and the light-weight Sinatra web framework.
 
