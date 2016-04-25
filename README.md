@@ -28,7 +28,7 @@ On Windows, the easiest way to set permanent environment variables (as of Window
 
 ## Nitrous Quickstart
 
-With [Nitrous.io](https://www.nitrous.io/) you can create a ready-made Brunch development environnment in just a few minutes at the click of a button.
+With [Nitrous.io](https://www.nitrous.io/) you can create a ready-made development environnment in just a few minutes at the click of a button.
 
 [Sign up](https://www.nitrous.io/app/#/signup) and [login](https://www.nitrous.io/app/#/login) to the Nitrous platform then click the button below to begin the Quickstart project creation process:
 

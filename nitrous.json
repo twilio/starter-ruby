@@ -5,6 +5,6 @@
   "logo": "http://i.imgur.com/ZwtzAso.png",
   "description": "https://github.com/twilio/starter-ruby",
   "scripts": {
-    "Run starter-ruby App": "cd ~/code/starter-ruby && ./script/server",
+    "Run starter-ruby App": "cd ~/code/starter-ruby && ./script/server"
   }
 }
