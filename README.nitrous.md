@@ -34,12 +34,17 @@ To run the app on Nitrous:
 
 1 - Click the ""Run starter-ruby App"" option from the "Run" tab to start the application.
 
+![Nitrous Run Menu](http://i.imgur.com/MKvommW.png)
+
 2 - Then click the "Preview" tab and "Port 3000".
+
+![Nitrous Preview Menu](http://i.imgur.com/KQHm6qN.png)
 
 Alternatively instead of the above, run the following commands in the terminal:
 
 ```bash
 $ cd ~/workspace/starter-ruby
 $ ./script/server
+```
 
-Then go to the "Preview Menu" and click "Port 3000"
+Then go to the "Preview" tab and click "Port 3000"
