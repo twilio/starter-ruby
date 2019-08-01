@@ -23,7 +23,7 @@ end
 # Handle a form POST to send a message
 post '/message' do
   # Use the REST API client to send a text message
-  client.account.sms.messages.create(
+  client.messages.create(
     :from => TWILIO_NUMBER,
     :to => params[:to],
     :body => 'Good luck on your Twilio quest!'
@@ -36,10 +36,10 @@ end
 # Handle a form POST to make a call
 post '/call' do
   # Use the REST API client to make an outbound call
-  client.account.calls.create(
+  client.calls.create(
     :from => TWILIO_NUMBER,
     :to => params[:to],
-    :url => 'http://twimlets.com/message?Message%5B0%5D=http://demo.kevinwhinnery.com/audio/zelda.mp3'
+    :url => 'http://demo.twilio.com/docs/voice.xml'
   )
 
   # Send back a text string with just a "hooray" message
