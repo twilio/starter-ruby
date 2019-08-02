@@ -6,7 +6,7 @@ require 'twilio-ruby'
 # on these variables.
 TWILIO_ACCOUNT_SID = ENV['TWILIO_ACCOUNT_SID']
 TWILIO_AUTH_TOKEN = ENV['TWILIO_AUTH_TOKEN']
-TWILIO_NUMBER = ENV['TWILIO_NUMBER']
+TWILIO_PHONE_NUMBER = ENV['TWILIO_PHONE_NUMBER']
 
 set :bind, '0.0.0.0'
 set :port, ENV['TWILIO_STARTER_RUBY_PORT'] || 4567
@@ -24,7 +24,7 @@ end
 post '/message' do
   # Use the REST API client to send a text message
   client.messages.create(
-    :from => TWILIO_NUMBER,
+    :from => TWILIO_PHONE_NUMBER,
     :to => params[:to],
     :body => 'Good luck on your Twilio quest!'
   )
@@ -37,7 +37,7 @@ end
 post '/call' do
   # Use the REST API client to make an outbound call
   client.calls.create(
-    :from => TWILIO_NUMBER,
+    :from => TWILIO_PHONE_NUMBER,
     :to => params[:to],
     :url => 'http://demo.twilio.com/docs/voice.xml'
   )
@@ -49,12 +49,11 @@ end
 # Render a TwiML document that will say a message back to the user
 get '/hello' do
   # Build a TwiML response
-  response = Twilio::TwiML::Response.new do |r|
-    r.Say 'Hello there! You have successfully configured a web hook.'
-    r.Say 'Good luck on your Twilio quest!', :voice => 'woman'
-  end
+  response = Twilio::TwiML::VoiceResponse.new
+  response.say(:message => 'Hello there! You have successfully configured a web hook.')
+  response.say(:message => 'Good luck on your Twilio quest!', :voice => 'woman')
 
   # Render an XML (TwiML) document
   content_type 'text/xml'
-  response.text
+  response.to_s
 end
