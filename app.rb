@@ -47,7 +47,7 @@ post '/call' do
 end
 
 # Render a TwiML document that will say a message back to the user
-get '/hello' do
+post '/hello' do
   # Build a TwiML response
   response = Twilio::TwiML::VoiceResponse.new
   response.say(:message => 'Hello there! You have successfully configured a web hook.')
