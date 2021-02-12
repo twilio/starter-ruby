@@ -38,6 +38,7 @@ To install the gems manually (if you don't know what bundler is and/or don't hav
 
     gem install twilio-ruby
     gem install sinatra
+    gem install puma
 
 Now, you should be able to launch the application.  From your terminal, run `ruby app.rb`.  This should launch your sinatra application on port 4567 - [visit that URL on your local host](http://localhost:4567/).  Enter your mobile number in the fields provided, and test both SMS text messages and phone calls being sent to the mobile number you provide.
 
