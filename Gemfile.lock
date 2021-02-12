@@ -9,8 +9,11 @@ GEM
     multi_json (1.13.1)
     multipart-post (2.1.1)
     mustermann (1.0.3)
+    nio4r (2.5.5)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
+    puma (5.2.1)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-flash3 (1.0.5)
       rack
@@ -38,6 +41,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  puma
   rack-flash3
   sinatra
   sinatra-contrib
